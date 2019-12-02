@@ -1,14 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
 
-const Test = styled.div`
-  color: red;
+import styled, { ThemeProvider } from 'styled-components';
+import GlobalStyle from './styles/GlobalStyle'
+import theme from './styles/theme';
+
+const ThemingSample = styled.div`
+  color: ${props => props.theme.testColor}
 `
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <Test>Hello Styled Components</Test>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle/>
+      <ThemingSample>theme</ThemingSample>
       <header className="App-header">
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -22,7 +26,7 @@ const App: React.FC = () => {
           Learn React
         </a>
       </header>
-    </div>
+    </ThemeProvider>
   );
 }
 
