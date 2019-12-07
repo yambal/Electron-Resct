@@ -67,7 +67,8 @@
     "test": "node scripts/test.js",
     "electron:dev": "electron .",
     "dev": "npm-run-all --sequential build electron:dev",
-    "package": "electron-packager . my-app --platform=win32 --arch=x64 --prune --out=release --overwrite"
+    "package": "electron-packager . my-app --platform=win32 --arch=x64 --prune --out=release --overwrite",
+    "storybook": "start-storybook"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -85,6 +86,7 @@
     ]
   },
   "devDependencies": {
+    "@storybook/react": "^5.2.8",
     "@types/jest": "24.0.23",
     "@types/node": "12.12.14",
     "@types/react": "16.9.13",
