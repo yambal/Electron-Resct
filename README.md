@@ -1,4 +1,7 @@
-# React
+# Electron-Resct
+## Erectron スタート レポジトリ 2019.12
+Electron + React + Redux で開発するためのスターターレポジトリ
+
 
 ## 開発起動
 
